@@ -41,6 +41,72 @@ namespace TechJobsOO
         {
             return HashCode.Combine(Id);
         }
+        public override string ToString()
+        {
+            string dNoAvailable = "Data not Avalaible";
+            string stringLineBlank = "";
+            if ((Name == null || Name.ToString().Trim() == "")
+                && (EmployerName == null || EmployerName.ToString().Trim() == "")
+                && (EmployerLocation == null || EmployerLocation.ToString().Trim() == "")
+                && (JobType == null || JobType.ToString().Trim() == "")
+                && (JobCoreCompetency == null || JobCoreCompetency.ToString().Trim() == "")) 
+            {
+                return "OOPS! This job does not seem to exist.";
+            }
+            stringLineBlank += "ID: " + Id + "\n";
+            if (Name == null || Name.Trim() == "")
+            {
+                stringLineBlank += "Name: " + dNoAvailable + "\n";
+            }
+            else
+            {
+                stringLineBlank += "Name: " + Name + "\n";
+            }
+
+
+            if (EmployerName == null || EmployerName.ToString().Trim() == "")
+            {
+                stringLineBlank += "Employer: " + dNoAvailable + "\n";
+            }
+            else
+            {
+                stringLineBlank += "Employer: " + EmployerName.ToString().Trim() + "\n";
+            }
+
+
+
+            if (EmployerLocation == null || EmployerLocation.ToString().Trim() == "")
+            {
+                stringLineBlank += "Location: " + dNoAvailable + "\n";
+            }
+            else
+            {
+                stringLineBlank += "Location: " + EmployerLocation.ToString().Trim() + "\n";
+            }
+
+
+            if (JobType == null || JobType.ToString().Trim() == "")
+            {
+                stringLineBlank += "Position Type: " + dNoAvailable + "\n";
+            }
+            else
+            {
+                stringLineBlank += "Position Type: " + JobType.ToString().Trim() + "\n";
+            }
+
+
+            if (JobCoreCompetency == null || JobCoreCompetency.ToString().Trim() == "")
+            {
+                stringLineBlank += "Core Competency: " + dNoAvailable + "\n";
+            }
+            else
+            {
+                stringLineBlank += "Core Competency: " + JobCoreCompetency.ToString().Trim() + "\n";
+            }
+            return stringLineBlank;
+
+
+        }
 
         // TODO: Generate Equals() and GetHashCode() methods.
     }
