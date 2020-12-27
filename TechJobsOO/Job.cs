@@ -29,7 +29,7 @@ namespace TechJobsOO
             JobCoreCompetency = jobCoreCompeytency;
             
         }
-
+        // TODO: Generate Equals() and GetHashCode() methods.
         public override bool Equals(object obj)
         {
             return obj is Job job &&
@@ -108,6 +108,6 @@ namespace TechJobsOO
 
         }
 
-        // TODO: Generate Equals() and GetHashCode() methods.
+        
     }
 }

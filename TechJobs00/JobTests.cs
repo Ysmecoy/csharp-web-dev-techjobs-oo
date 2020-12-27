@@ -18,7 +18,7 @@ namespace TechJobsTests
             Job job1 = new Job();
             Job job2 = new Job();
 
-            Assert.AreEqual(1, job2.Id - job1.Id);
+            Assert.AreEqual(1, job2.Id - job1.Id,0.001);
 
         }
         [TestMethod]
@@ -54,7 +54,7 @@ namespace TechJobsTests
 
 
         }
-
+        
         //The string should contain a label for each field, followed by the data stored in that field. Each field should be on its own line.
         [TestMethod]
         public void TestJobToString()
