@@ -53,7 +53,7 @@ namespace TechJobsOO
             {
                 return "OOPS! This job does not seem to exist.";
             }
-            stringLineBlank += "ID: " + Id + "\n";
+            stringLineBlank += "\nID: " + Id + "\n";
             if (Name == null || Name.Trim() == "")
             {
                 stringLineBlank += "Name: " + dNoAvailable + "\n";
